@@ -1,0 +1,33 @@
+{
+    "name": "group-by-subsequence",
+    "homepage": "https://github.com/khrome/group-by-subsequence",
+    "version": "0.0.1",
+    "main": "group-by-subsequence.js",
+    "description": "Group things by complete word prefixes",
+    "keywords": [
+        "subsequence",
+        "prefix",
+        "strings",
+        "group"
+    ],
+    "author": "Abbey Hawk Sparrow <@khrome> (http://patternweaver.com)",
+    "contributors": [],
+    "bugs": {
+        "url": "https://github.com/khrome/group-by-subsequence/issues"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/khrome/group-by-subsequence.git"
+    },
+    "dependencies": {
+        "common-prefix": "*",
+        "common-path-prefix": "*",
+        "async-objects" : "*"
+    },
+    "devDependencies": {},
+    "optionalDependencies": {},
+    "engines": {
+        "node": "*"
+    }
+}
