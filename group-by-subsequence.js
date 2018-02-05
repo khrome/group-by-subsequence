@@ -48,6 +48,15 @@ function listToCommonIndex(list, opts){
             index[can].push(item);
         }
     });
+    var items = list.filter(function(item){
+        return item.indexOf('_') === -1
+    })
+    items.map(function(item){
+        return item.split('.').shift().trim();
+    }).forEach(function(str, pos){
+        if(index[str]) index[str].push(items[pos]);
+        else index[str] = [items[pos]];
+    });
     return index;
 }
 
