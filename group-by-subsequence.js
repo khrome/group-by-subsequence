@@ -5,6 +5,10 @@ var Objects = require('async-objects');
 function listToCommonIndex(list, opts){
     var options = opts || {};
     var index = {};
+    var aliases = options.alias;
+    var v = function(key){
+        return aliases[key.toLowerCase?key.toLowerCase():key] || key;
+    }
     list.forEach(function(item){
         var cans = {};
         var forwardExpression = new RegExp(options.wordBoundary, 'g');
@@ -26,6 +30,7 @@ function listToCommonIndex(list, opts){
                 }
                 if(common && options.stopwords && options.stopwords.indexOf(common) !== -1){
                     var next = item.substring(common.length+1).indexOf(options.wordBoundary);
+                    next = v(next);
                     var length = common.length+(next === -1?item.length:next+1);
                     common = common+item.substring(common.length, length);
                     if(options.objectReturn && typeof options.objectReturn === 'function'){

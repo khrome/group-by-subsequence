@@ -1,7 +1,7 @@
 {
     "name": "group-by-subsequence",
     "homepage": "https://github.com/khrome/group-by-subsequence",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "group-by-subsequence.js",
     "description": "Group things by complete word prefixes",
     "keywords": [
